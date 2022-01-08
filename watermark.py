@@ -16,12 +16,10 @@ while True :
     try :
         image = input("Enter your image name here, like YourImage.jpg \n")
         img = imread(image)
-        print("Image : " , img)
         my_logo = input("Enter your logo name here, like MyLogo.jpg \n")
         lg = imread(my_logo)
-        print("logo : " , lg)
     except :
-            print("Could not read" ,image,"Or could not read" ,my_logo)
+            print("Could not read image or could not read your logo")
     else : 
         break
 print(" \n \n\t \t \tWatermark position \n")
@@ -42,7 +40,7 @@ while True:
     if pos != "TL" and pos != "TR" and pos != "BL" and pos != "BR" and pos != "C" : 
         print ("Your input is not the correct value:")
     else :
-        print("Your input is right" , pos)
+        print("Your input is right")
         break    
 
 
@@ -63,7 +61,6 @@ else :
     imsave('etretat_watermark.jpg', result)
 plt.figure()
 plt.imshow(img)
-plt.title("Image with Watermark!")
+plt.title("Watermark image")
 plt.show()
-
 print("END....")
